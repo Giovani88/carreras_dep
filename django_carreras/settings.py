@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-bh1x3)+l!mb%llmgq+nm6u=e16^yz=0np&n1q1my$5y#(8b3m%'
-SECRET_KEY = 'django-insecure-n!2b8+pzf8j=5^&7^f8wkszdc0$qsjce4c-tthms7+n4f1u=7$'
+SECRET_KEY = 'django-insecure-i@mf9^y_xn=!9)klfqow0+utixo4ykz_@dpa6zqq=p9fcua=^*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -118,3 +118,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS AUTHORIZATION
 CORS_ALLOWED_ORIGINS = [
 ]
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [        
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ],
+}
