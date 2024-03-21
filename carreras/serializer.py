@@ -5,4 +5,4 @@ class CarrerasSerializer(serializers.ModelSerializer):
     class Meta:
         model = Carreras
         
-        fields = ('nombre','clave','plan_estudios','is_active')
+        fields = ('id','nombre','clave','plan_estudios','is_active')

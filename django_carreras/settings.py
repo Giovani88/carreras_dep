@@ -13,11 +13,11 @@ SECRET_KEY = 'django-insecure-i@mf9^y_xn=!9)klfqow0+utixo4ykz_@dpa6zqq=p9fcua=^*
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ["*"]
 
-ALLOWED_HOSTS = []
 
-
-# Application definition
+# Application definition #
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -115,12 +115,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS AUTHORIZATION
-CORS_ALLOWED_ORIGINS = [
-]
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [        
         "rest_framework.authentication.SessionAuthentication",
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        "rest_framework_simplejwt.authentication.JWTStatelessUserAuthentication",
     ],
 }
